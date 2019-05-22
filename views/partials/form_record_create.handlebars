@@ -1,0 +1,73 @@
+<form action="/records/create" method="POST" class="mt-5">
+
+    <div class="form_title row mb-3">
+        <p class="col-sm-4 remark font-weight-bold    ">
+            *必填欄位
+        </p>
+        <p class="col-sm-5 text-center title font-weight-bold">
+            請輸入你的支出
+        </p>
+        {{> message}}
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 font-weight-bold" for="name">名稱* :
+        </label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <input type="hidden" name="userId" value="{{user._id}}">
+                <input type="text" id="name" class="form-control" name="name" value="{{data.name}}" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 font-weight-bold    " for="date">日期* :
+        </label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <input type="text" name="date" class=" datepicker form-control" value="{{data.date}}">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon3"><i class="fas fa-calendar-week"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 font-weight-bold   " for="category">類別* :
+        </label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <select class="form-control" name="category" id="category">
+                    <option>Select </option>
+                    <option value="fa-home" {{#if home }}selected{{/if}}>家居物業</option>
+                    <option value="fa-shuttle-van" {{#if traffic  }}selected{{/if}}>交通出行</option>
+                    <option value="fa-grin-beam" {{#if fun }}selected{{/if}}>休閒娛樂</option>
+                    <option value="fa-utensils" {{#if food }}selected{{/if}}>餐飲食品</option>
+                    <option value="fa-pen" {{#if other }}selected{{/if}}>其他</option>
+
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 font-weight-bold    " for="amount">金額* :
+        </label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <input class="form-control" type="text" id="amount" class="form-control" name="amount"
+                    value="{{data.amount}}" />
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-4"></div>
+        <div id="create_button" class="col-sm-5">
+            <button type="submit" class="btn btn-light btn-outline-dark">
+                新增支出
+            </button>
+        </div>
+    </div>
+</form>

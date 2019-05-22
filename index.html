@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>index</title>
+  </head>
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav class="navbar navbar-light bg-light">
+        <a class="product_name navbar-brand">家庭記帳本</a>
+        <a href="/user/logout" class="btn btn-primary  ">登出</a>
+      </nav>
+    </header>
+
+    <div class="container ">
+      <div class="row">
+        <div class="col-sm-10 m-auto">
+          <!-- 下拉選單 -->
+          <div class="row mt-4 mb-4">
+            <select id="filter_month" class="filter col-sm-4" name="month">
+              <option selected>月份</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <select
+              id="filter_category"
+              class="filter col-sm-4"
+              name="category"
+            >
+              <option selected>類別</option>
+              <option value="home">家居物業</option>
+              <option value="traffic">交通出行</option>
+              <option value="fun">休閒娛樂</option>
+              <option value="food">餐飲食品</option>
+              <option value="other">其他</option>
+            </select>
+
+            <div class="col-sm-4"></div>
+          </div>
+          <!-- 消費總額 -->
+          <div class="row total_result  mt-4 mb-4 ">
+            <div class="col-sm-3 total_result_title ">
+              <p>總金額 :</p>
+            </div>
+
+            <div class="col-sm-6 total_result_value">
+              <p>25260</p>
+            </div>
+            <div class="col-sm-3"></div>
+          </div>
+          <!-- 帳務紀錄-紀錄列 -->
+          <div class="row mt-4 mb-4  ">
+            <div class="col-sm-9 record_left">
+              <div class="row">
+                <div class="col-sm-2 item_icon">
+                  <i class="fas fa-home fa-4x"></i>
+                </div>
+                <div class="col-sm-8">
+                  <p class="record_title">午餐</p>
+                  <p>2018/04/03</p>
+                </div>
+                <div class="col-sm-2 "><p class="item_value">60</p></div>
+              </div>
+            </div>
+            <!-- 帳務紀錄-按鈕列 -->
+            <div class="col-sm-3 record_right">
+              <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm">
+                  <a href="" class="record_button">修改</a>
+                </div>
+                <div class="col-sm">
+                  <a href="" class="record_button">刪除</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 下方按鈕 -->
+          <div class="row mt-3">
+            <div id="create_button" class="col-sm-9">
+              <a class="btn btn-lg  btn-outline-dark">新增支出</a>
+            </div>
+            <div class="col-sm-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------------------------- -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

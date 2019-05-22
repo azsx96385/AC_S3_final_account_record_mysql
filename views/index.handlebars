@@ -1,0 +1,10 @@
+{{!-- 下拉選單 --}}
+{{> record_dropdown}}
+{{!-- 總金額統計 --}}
+{{> record_totalresult}}
+{{!-- 帳務列表 --}}
+{{#each userRecords}}
+{{> record_recordlist}}
+{{/each}}
+{{!-- 提交按鈕 --}}
+{{> record_button}}

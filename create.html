@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./classic.css" />
+    <link rel="stylesheet" href="./classic.date.css" />
+
+    <title>create</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-sm-8 m-auto ">
+          <form action="">
+            <div class="form_title row mb-3">
+              <p class="col-sm-4 remark font-weight-bold    ">
+                *必填欄位
+              </p>
+              <p class="col-sm-5 text-center title font-weight-bold">
+                請輸入你的支出
+              </p>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-4 font-weight-bold     " for="name"
+                >名稱* :
+              </label>
+              <div class="col-sm-5">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-4 font-weight-bold    " for="date"
+                >日期* :
+              </label>
+              <div class="col-sm-5">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="date"
+                    class=" datepicker form-control"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon3"
+                      ><i class="fas fa-calendar-week"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 font-weight-bold   " for="category"
+                >類別* :
+              </label>
+              <div class="col-sm-5">
+                <div class="input-group">
+                  <select class="form-control" name="category" id="category">
+                    <option selected>Select </option>
+                    <option value="home">家居物業</option>
+                    <option value="traffic">交通出行</option>
+                    <option value="fun">休閒娛樂</option>
+                    <option value="food">餐飲食品</option>
+                    <option value="other">其他</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 font-weight-bold    " for="amount"
+                >金額* :
+              </label>
+              <div class="col-sm-5">
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="amount"
+                    class="form-control"
+                    name="amount"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-4"></div>
+              <div id="create_button" class="col-sm-5">
+                <button type="submit" class="btn btn-light btn-outline-dark">
+                  新增支出
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./picker.js"></script>
+    <script src="./picker.date.js"></script>
+    <script>
+      $(".datepicker").pickadate({
+        format: " yyyy/mm/dd",
+        formatSubmit: "yyyy/mm/dd"
+      });
+    </script>
+  </body>
+</html>

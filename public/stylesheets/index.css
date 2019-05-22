@@ -1,0 +1,67 @@
+p,
+h3,
+label,
+select,
+a {
+  font-family: 微軟正黑體;
+}
+
+/* 下拉區塊 */
+.filter {
+  height: 40px;
+  margin: 10px;
+  border: 2px solid black;
+}
+/* 總金額 */
+
+.total_result_title p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.total_result_value p {
+  text-align: right;
+  color: orange;
+  font-size: 100px;
+}
+/* 帳務列表區 */
+.record_left {
+  background-color: rgba(233, 223, 223, 0.5);
+  padding-top: 10px;
+}
+.item_icon {
+  text-align: center;
+}
+.record_title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.item_value {
+  padding-top: 10px;
+
+  font-size: 30px;
+}
+.record_right {
+  padding-top: 25px;
+}
+.record_button {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+/* 底下按鈕 */
+#create_button {
+  text-align: center;
+}
+#create_button a {
+  color: white;
+  padding: 8px 50px;
+  background-color: orange;
+}
+
+/* 特殊使用 */
+
+.hidden {
+  display: none;
+}

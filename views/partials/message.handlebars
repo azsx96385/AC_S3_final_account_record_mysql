@@ -1,0 +1,31 @@
+{{!-- //successMessage --}}
+{{#if successMessage}}
+<div class="alert alert-success" role="alert">
+    {{successMessage}}
+</div>
+{{/if}}
+
+
+{{!-- //errorMessage --}}
+{{#if errorMessage  }}
+{{#each errorMessage}}
+<div class="alert alert-danger" role="alert">
+    {{this.message}}
+</div>
+{{/each}}
+{{/if}}
+
+
+{{!-- //驗證錯誤 - errorMessage --}}
+{{#if passportErrorMessage  }}
+<div class="alert alert-danger" role="alert">
+    {{passportErrorMessage}}
+</div>
+{{/if}}
+
+{{!-- //驗證錯誤 - errorMessage --}}
+{{#if recordErrorMessage  }}
+<div class="alert alert-danger" role="alert">
+    {{recordErrorMessage}}
+</div>
+{{/if}}

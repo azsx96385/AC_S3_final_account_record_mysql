@@ -1,0 +1,35 @@
+<!-- 帳務紀錄-紀錄列 -->
+<div class="row mt-4 mb-4 record ">
+    <div class="col-sm-9 record_left">
+        <div class="row">
+            <div class="col-sm-2 item_icon">
+                {{!-- 參數1.icon --}}
+                <i class="fas {{this.category}} fa-4x"></i>
+            </div>
+            <div class="col-sm-8">
+                {{!-- 參數2.項目標題 --}}
+                <p class="record_title">{{this.name}}</p>
+                {{!-- 參數3.日期 --}}
+                <p class="record_date">{{this.date}}</p>
+            </div>
+            <div class="col-sm-2 ">
+                {{!-- 參數4.記帳金額 --}}
+                <p class="item_value">{{this.amount}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- 帳務紀錄-按鈕列 -->
+    <div class="col-sm-3 record_right">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm">
+                {{!-- 參數5.物件ID --}}
+                <a href="/records/edit/{{this._id}}" class="record_button">修改</a>
+            </div>
+            <div class="col-sm">
+                {{!-- 參數6.物件ID --}}
+                <a href="/records/delete/{{this._id}}" class="record_button">刪除</a>
+            </div>
+        </div>
+    </div>
+</div>
